@@ -1,0 +1,17 @@
+<div class="item" ng-repeat="(key, item) in items | filter: { status: statusCode}">
+  <button class="btn btn-delete tooltip"
+    ng-click="deleteItem(key)">X<span>Delete this item</span></button>
+
+  <div class="task">Task: {{item.name}}</div>
+
+  <div class="date">Created: {{item.date | date: "MMM d, yyyy h:mm a"}}</div>
+
+  <div class="moveWrap">
+    <span class="moveItem">Move task: </span>
+    <button class="btn btn-prev tooltip"
+      ng-hide="statusOrder.indexOf(statusCode) == 0" ng-click="moveItem(key, (statusOrder.indexOf(statusCode) - 1))">&lt;<span>Move to {{ statusOrderPretty[(statusOrder.indexOf(statusCode) - 1)] }}</span></button>
+    <button class="btn btn-next tooltip"
+      ng-hide="statusOrder.indexOf(statusCode) == 3"
+      ng-click="moveItem(key, (statusOrder.indexOf(statusCode) + 1))">&gt;<span>Move to {{ statusOrderPretty[(statusOrder.indexOf(statusCode) + 1)] }}</span></button>
+  </div>
+</div>

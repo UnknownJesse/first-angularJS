@@ -1,0 +1,64 @@
+<section class="scrumBorad">
+  <h1>Personal Scrum Board</h1>
+
+  <form class="addItem"
+    name="itemForm"
+    ng-submit="addItem()"
+    novalidate>
+    <div class="inputwrapper">
+      <span>Add a new task: </span>
+      <input type="text" name="itemname"
+        placeholder="Task name"
+        ng-model="itemname" ng-required="true">
+      <button type="submit" class="btn"
+       ng-disabled="myform.$invalid">+</button>
+    </div>
+  </form>
+
+  <div class="sortOptions">
+    <span>Sort options: </span>
+    <input type="radio" id="dateAscending" name="direction"
+      ng-click="sortItems('date')" ng-model="sortOptions" value="date">
+    <label for="dateAscending">Old to New</label>&nbsp;
+
+    <input type="radio" id="dateDescending" name="direction"
+      ng-click="sortItems('-date')" ng-model="sortOptions" value="-date">
+    <label for="dateDescending">New to Old</label>
+
+    <input type="radio" id="nameAscending" name="direction"
+      ng-click="sortItems('name')" ng-model="sortOptions" value="name">
+    <label for="nameAscending">A-Z</label>&nbsp;
+
+    <input type="radio" id="nameDescending" name="direction"
+      ng-click="sortItems('-name')" ng-model="sortOptions" value="-name">
+    <label for="nameDescending">Z-A</label>
+  </div>
+
+  <div class="board">
+    <div class="scrum">
+      <div class="col toDo">
+        <div class="heading">To Do:</div>
+
+        <div ng-repeat="statusCode in ['to_do']" ng-include="'views/items.html'"></div>
+      </div>
+
+      <div class="col inProgress">
+        <div class="heading">In Progress:</div>
+
+        <div ng-repeat="statusCode in ['in_progress']" ng-include="'views/items.html'"></div>
+      </div>
+
+      <div class="col fixed">
+        <div class="heading">Fixed:</div>
+
+        <div ng-repeat="statusCode in ['fixed']" ng-include="'views/items.html'"></div>
+      </div>
+
+      <div class="col complete">
+        <div class="heading">Complete:</div>
+
+        <div ng-repeat="statusCode in ['complete']" ng-include="'views/items.html'"></div>
+      </div>
+    </div>
+  </div>
+</section>

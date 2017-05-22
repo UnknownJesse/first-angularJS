@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="myApp">
+<head>
+  <script src="js/lib/angular/angular.min.js"></script>
+  <script src="js/lib/angular/angular-route.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBXUylF9ZoALLfVGRm6Lt2e5lcIn7nyVno",
+    authDomain: "angularjs-scrum.firebaseapp.com",
+    databaseURL: "https://angularjs-scrum.firebaseio.com",
+    projectId: "angularjs-scrum",
+    storageBucket: "angularjs-scrum.appspot.com",
+    messagingSenderId: "993615378775"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/controllers/board.js"></script>
+
+  <link rel="stylesheet" href="css/show.css"></script>
+</head>
+
+<body>
+
+<header>
+  <nav ng-include="'views/header.html'"></nav>
+</header>
+
+<main ng-view></main>
+
+</body>
+</html>

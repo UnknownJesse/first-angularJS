@@ -1,0 +1,182 @@
+ul {
+  list-style-type: none;
+  margin: 0; }
+  ul li {
+    display: inline-block; }
+
+a {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  text-decoration: none;
+  color: #0066cc; }
+  a:hover {
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    color: #cc0000; }
+
+body {
+  margin: 0;
+  background: #fff; }
+
+nav {
+  position: relative;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  box-shadow: 0px 1px 6px 1px #000;
+  background: #ffe699; }
+  nav .home {
+    position: absolute;
+    left: 20px; }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0; }
+    nav ul li {
+      float: left;
+      margin-left: 20px; }
+
+main {
+  margin: 0 20px; }
+
+h1 {
+  font-size: 30px;
+  text-align: center; }
+
+.addItem .inputwrapper {
+  margin-bottom: 20px;
+  font-size: 24px; }
+
+.sortOptions {
+  margin-bottom: 20px; }
+  .sortOptions input:hover, .sortOptions label:hover {
+    cursor: pointer; }
+  .sortOptions input {
+    margin-left: 20px; }
+
+.scrum {
+  display: flex;
+  background: linear-gradient(#fff, #C8C8C8);
+  border: 4px solid black; }
+  .scrum .col {
+    display: inline-block;
+    flex: 1;
+    border-left: 4px solid #000; }
+    .scrum .col:first-of-type {
+      border: 0; }
+    .scrum .col .heading {
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 4px solid #000;
+      font-size: 26px;
+      font-weight: 600; }
+  .scrum .item {
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    position: relative;
+    background: #ffc;
+    box-shadow: 5px 6px 8px rgba(33, 33, 33, 0.8);
+    margin: 40px;
+    padding: 10px;
+    -moz-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg); }
+    .scrum .item:nth-child(even) {
+      -moz-transform: rotate(2deg);
+      -o-transform: rotate(2deg);
+      -ms-transform: rotate(2deg);
+      -webkit-transform: rotate(2deg);
+      transform: rotate(2deg);
+      position: relative;
+      top: 5px; }
+    .scrum .item:nth-child(3n) a {
+      -moz-transform: rotate(-3deg);
+      -o-transform: rotate(-3deg);
+      -ms-transform: rotate(-3deg);
+      -webkit-transform: rotate(-3deg);
+      transform: rotate(-3deg);
+      position: relative;
+      top: -5px; }
+    .scrum .item:nth-child(5n) a {
+      -moz-transform: rotate(4deg);
+      -o-transform: rotate(4deg);
+      -ms-transform: rotate(4deg);
+      -webkit-transform: rotate(4deg);
+      transform: rotate(4deg);
+      position: relative;
+      top: -10px; }
+    .scrum .item:hover, .scrum .item:focus {
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease;
+      transition-timing-function: ease;
+      -moz-transform: scale(1.15);
+      -o-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+      -webkit-transform: scale(1.15);
+      transform: scale(1.15);
+      box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+      position: relative;
+      z-index: 5; }
+    .scrum .item .task {
+      font-size: 24px;
+      margin-bottom: 10px; }
+    .scrum .item .date {
+      margin-bottom: 10px; }
+  .scrum .moveWrap {
+    text-align: right; }
+
+.btn-delete {
+  background-color: #860000;
+  color: #fff; }
+  .btn-delete.tooltip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none; }
+
+.tooltip {
+  position: relative;
+  cursor: pointer; }
+  .tooltip span {
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    position: absolute;
+    z-index: 5;
+    top: -30px;
+    left: -40px;
+    width: 105px;
+    padding: 5px;
+    background: white;
+    color: #000;
+    border: 1px solid black;
+    border-radius: 7px;
+    opacity: 0; }
+  .tooltip:hover span {
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    opacity: 1; }
